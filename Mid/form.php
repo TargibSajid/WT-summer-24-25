@@ -5,7 +5,7 @@
     <title>Lab Task</title>
 </head>
 
-<body>
+<body >
     <center>
         <h1 style="color: blue;">AIUB</h1>
         <h2 style="color: blue;">Registration Form</h2>
