@@ -52,12 +52,12 @@
     z-index: 2;
 }
 
-/* ✅ Added missing part: outline for focus */
+
 input:focus, select:focus, textarea:focus {
     outline: 2px solid #007BFF;
 }
 
-/* ✅ ID selector for #fullname */
+
 #fullname {
     outline: 2px dashed #33aaff;
 }
