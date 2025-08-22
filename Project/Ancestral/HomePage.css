@@ -2,7 +2,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #fdf9f4;
-            color: #3a2d2d;
+            color: #000000;
         }
         header {
             display: flex;
@@ -14,8 +14,13 @@
         }
         header h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 40px;
             letter-spacing: 1px;
+
+            position: relative;
+            top: 40px;
+            left:50px;
+
         }
         nav a {
             margin: 0 15px;
@@ -69,3 +74,18 @@
             background-color: #f5f1eb;
             margin-top: 40px;
         }
+
+        .Logo {
+            height: 100px;
+            width: 100spx;
+
+            position: relative;
+
+            top: 10px;
+            left: -800px;
+
+
+        }
+
+
+        

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ancestral - Empowering Businesses Through Technology</title>
 
-    <link rel = "stylesheet" href = "HomePage.css">
+    <link rel = "stylesheet"  type = "text/css" href = "HomePage.css?<?php echo time(); ?>">
 
 
     </head>
@@ -13,7 +13,9 @@
 
 <body>
     <header>
-        <h1>ANCESTRAL</h1>
+        <h1>NCESTRAL</h1>
+        <img src="Logo.svg" alt="Ancestral Logo" class="Logo">
+
         <nav>
             <a href="#">Home</a>
             <a href="#">About</a>
