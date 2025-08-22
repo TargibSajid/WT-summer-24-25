@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ancestral - Empowering Businesses Through Technology</title>
 
-    <link rel = "stylesheet" type = "Text/CSS" href = "HomePage.css">
+    <link rel = "stylesheet" href = "HomePage.css">
 
 
     </head>

@@ -1,6 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ancestral - Empowering Businesses Through Technology</title>
+ body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fdf9f4;
+            color: #3a2d2d;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #fff;
+            border-bottom: 1px solid #e0dcdc;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #3a2d2d;
+            font-weight: bold;
+        }
+        .btn {
+            background-color: #4d3b36;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+        .section {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .section h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .section p {
+            font-size: 18px;
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f5f1eb;
+            margin-top: 40px;
+        }
