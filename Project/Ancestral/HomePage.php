@@ -12,9 +12,23 @@
 
 
 <body>
+
+
+
+
+
+
+    <button type = "submit" class = "logout">
+    <img src="Logout.png" alt="icon" style="width:25px; height:25px; vertical-align:left;">        
+    Sign in
+</button>
+
     <header>
-        <h1>NCESTRAL</h1>
+        <h1>NCESTRAL
+            
+        </h1>
         <img src="Logo.svg" alt="Ancestral Logo" class="Logo">
+        
 
         <nav>
             <a href="#">Home</a>
@@ -24,6 +38,9 @@
             <a href="#" class="btn">Get Started</a>
         </nav>
     </header>
+
+
+    <img src="BGimage.jpg" class="bg-image" alt="Background Image">
 
     <section class="hero">
         <h2>Empowering Businesses Through Technology</h2>
