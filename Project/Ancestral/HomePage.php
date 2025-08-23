@@ -23,14 +23,15 @@
     Sign in
 </button>
 
-    <header>
+<div class="header-container">  
+<header id = "main-header">
         <h1>NCESTRAL
             
         </h1>
         <img src="Logo.svg" alt="Ancestral Logo" class="Logo">
         
 
-        <nav>
+        <nav class="nav">
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Services</a>
@@ -38,14 +39,19 @@
             <a href="#" class="btn">Get Started</a>
         </nav>
     </header>
+</div>
 
 
-    <img src="BGimage.jpg" class="bg-image" alt="Background Image">
+
+
+    <img src="BackGround.jpg" class="bg-image" alt="Background Image" style="z-index: -1;" >
 
     <section class="hero">
         <h2>Empowering Businesses Through Technology</h2>
         <p>We provide cutting-edge software solutions and services to help businesses thrive.</p>
         <a href="#" class="btn">Get Started</a>
+
+        
     </section>
 
     <section class="section">
@@ -57,5 +63,10 @@
     <footer>
         <p>&copy; 2025 Ancestral. All Rights Reserved.</p>
     </footer>
+
+
+
+
+    <script src="HomePage.js"></script>
 </body>
 </html>
