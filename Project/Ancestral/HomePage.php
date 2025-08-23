@@ -10,6 +10,8 @@
 
     </head>
 
+    
+
 
 <body>
 
@@ -50,6 +52,7 @@
         <h2>Empowering Businesses Through Technology</h2>
         <p>We provide cutting-edge software solutions and services to help businesses thrive.</p>
         <a href="#" class="btn">Get Started</a>
+        
 
         
     </section>

@@ -25,6 +25,7 @@ header {
   padding: 20px 50px;
   background-color: #fff;
   border-bottom: 1px solid #e0dcdc;
+  opacity: 1;
 }
 
 
@@ -43,6 +44,7 @@ header {
             left:50px;
 
             cursor: pointer;
+            opacity: 1;
 
         }
         nav a {
@@ -51,6 +53,7 @@ header {
             color: #3a2d2d;
             font-weight: bold;
             font-size: 20px;
+            opacity: 1;
         }
         .btn {
             background-color: #4d3b36;
@@ -109,6 +112,7 @@ header {
             left: -800px;
 
             cursor: pointer;
+            opacity: 1  ;
 
 
         }
@@ -146,6 +150,7 @@ header {
             position: relative;
             right: 200px;
             top: 0px;
+            opacity: 1;
         }
 
 
