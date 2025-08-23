@@ -16,14 +16,18 @@
 <body>
 
 
-
-
-
+<div class="logout-container" >
 
     <button type = "submit" class = "logout">
     <img src="Logout.png" alt="icon" style="width:25px; height:25px; vertical-align:left;">        
     Sign in
 </button>
+
+</div>
+
+
+
+
 
 <div class="header-container">  
 <header id = "main-header">
@@ -47,6 +51,8 @@
 
 
     <img src="BackGround.jpg" class="bg-image" alt="Background Image" style="z-index: -1;" >
+
+    
 
     <section class="hero">
         <h2>Empowering Businesses Through Technology</h2>
