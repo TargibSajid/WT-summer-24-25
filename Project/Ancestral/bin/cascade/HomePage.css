@@ -65,6 +65,7 @@ header {
             text-decoration: none;
             border-radius: 5px;
             width: 100px;
+            position: relative;
         }
         .hero {
             display: flex;
@@ -124,15 +125,17 @@ header {
             background-color: transparent;
             color: #040404;
             padding: 10px 20px;
-            border: none;
+            border: solid black 4px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 20px;
             font-weight: bold;
             font-size: 20px;
 
             position: absolute;
 
             right: 50px ;
+
+            cursor: pointer;
 
       
 
@@ -187,6 +190,32 @@ header {
         
             background-color: transparent;
             
+        }
+        #vdiv
+        {
+
+
+            height: 600px;
+            width: 500px ;
+            position: absolute ;
+
+            top: 300px;
+            right : 200px;
+
+            background-color: transparent;
+            
+            border-radius: 10px;
+            overflow: hidden; 
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        #introvd
+        {
+           height: 100%;
+    width: 100%;
+    display: block; /* removes unwanted inline spacing */
+    object-fit: cover;
+
         }
 
        
