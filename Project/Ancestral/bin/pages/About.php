@@ -4,52 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Ancestral</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-    
+    <link rel="stylesheet" href="styles.css"> <!-- Optional external CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background-color: #4a148c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        h2 {
+            color: #4a148c;
+            margin-bottom: 15px;
+        }
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .team-member {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 220px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .team-member img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            background: #4a148c;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        a.cta-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #4a148c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a.cta-button:hover {
+            background: #6a1b9a;
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <h1>About Us – Ancestral</h1>
+        <h1>About Ancestral</h1>
+        <p>Building intelligent solutions for a better digital future</p>
     </header>
 
-    <div class="container">
-        <div class="section">
-            <h2>Our Mission</h2>
-            <p>At <strong>Ancestral</strong>, our mission is to empower businesses and individuals through cutting-edge AI-driven software solutions. We strive to create innovative tools that simplify processes, improve efficiency, and enhance everyday life.</p>
-        </div>
+    <section>
+        <h2>Our Mission</h2>
+        <p>At Ancestral, our mission is to develop cutting-edge AI solutions, operating systems, and software tools that simplify businesses and empower people worldwide.</p>
+    </section>
 
-        <div class="section">
-            <h2>Our Vision</h2>
-            <p>We envision a world where technology seamlessly integrates into daily life and business operations, unlocking potential and fostering innovation at every level. Our goal is to be a trusted partner for organizations seeking smart, reliable, and scalable software solutions.</p>
-        </div>
+    <section>
+        <h2>Our Vision</h2>
+        <p>We aim to become a leading force in artificial intelligence and technology innovation, shaping the future of digital experiences for businesses and individuals alike.</p>
+    </section>
 
-        <div class="section">
-            <h2>Our Story</h2>
-            <p>Founded with a passion for technology and innovation, <strong>Ancestral</strong> began with a simple idea: to leverage AI and software to solve real-world problems. Over time, we have grown into a company that combines creativity, expertise, and advanced technology to deliver high-quality solutions tailored to our clients’ needs.</p>
-        </div>
+    <section>
+        <h2>Our Story</h2>
+        <p>Ancestral started with a dream — to create intelligent, user-friendly technology that makes life easier. Founded by passionate innovators, we are committed to building tools that are smart, reliable, and future-ready.</p>
+    </section>
 
-        <div class="section">
-            <h2>Core Values</h2>
-            <ul>
-                <li><strong>Innovation:</strong> We continuously explore new technologies to deliver smarter, more efficient solutions.</li>
-                <li><strong>Integrity:</strong> We operate with transparency, honesty, and professionalism in every project.</li>
-                <li><strong>Collaboration:</strong> We work closely with our clients, ensuring solutions align perfectly with their goals.</li>
-                <li><strong>Excellence:</strong> We are committed to high-quality development, robust design, and outstanding user experiences.</li>
-            </ul>
-        </div>
+    <section>
+        <h2>Core Values</h2>
+        <ul>
+            <li>Innovation & Creativity</li>
+            <li>Transparency & Trust</li>
+            <li>Privacy & Security First</li>
+            <li>User-Centric Design</li>
+        </ul>
+    </section>
 
-        <div class="section">
-            <h2>Our Approach</h2>
-            <p>At <strong>Ancestral</strong>, we believe in combining advanced AI technologies with practical software development to create impactful solutions. From web and mobile apps to enterprise software and custom AI tools, we focus on building products that are reliable, scalable, and designed to make a real difference.</p>
+    <section>
+        <h2>Our Team</h2>
+        <div class="team">
+            <div class="team-member">
+                <img src="founder.jpg" alt="Founder">
+                <h3>Targib Uddin Sajid</h3>
+                <p>Founder & Visionary</p>
+            </div>
+            <!-- Add more team members as needed -->
         </div>
+    </section>
 
-        <!-- New quick links section -->
-        <div class="section quick-links">
-            <a href="services.html">Our Services</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="blog.html">Blog / Insights</a>
-            <a href="careers.html">Careers</a>
-        </div>
-    </div>
+    <section>
+        <h2>Who We Serve</h2>
+        <p>We work with businesses, researchers, and individuals who are ready to embrace innovative, AI-driven technology solutions to transform their workflows and operations.</p>
+    </section>
+
+    <section>
+        <h2>Technologies We Work With</h2>
+        <p>Artificial Intelligence, Web Development, Operating Systems, Browser Technology, Business Process Software.</p>
+    </section>
+
+    <section>
+        <h2>Achievements</h2>
+        <p>Our journey has been marked by several milestones and projects that have positively impacted businesses and users across various industries.</p>
+    </section>
+
+    <section>
+        <h2>Join Our Journey</h2>
+        <p>We invite you to explore our services, collaborate with us, or simply learn more about what we do.</p>
+        <a href="contact.html" class="cta-button">Contact Us</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ancestral. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
