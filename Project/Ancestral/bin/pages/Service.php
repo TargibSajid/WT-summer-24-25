@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../cascade/Service.css? <?php echo time(); ?>">
 </head>
 <body>
-<div class="bg-image"></div>
+<div class="bg-img"></div>
 
 <div class="header-container">
     <header id="main-header">
@@ -28,7 +28,7 @@
     <div class="section">
         <div class="section-icon">
 
-            <image src="../../AI.png" alt="AI Icon" >
+            <img src="../../AI.png" alt="AI Icon" >
 
         </div>
         <div class="section-content">
@@ -44,7 +44,7 @@
 
     <div class="section">
         <div class="section-icon">
-            <image src="../../WEB.png" alt="Web Development Icon" >
+            <img src="../../WEB.png" alt="Web Development Icon" >
         </div>
         <div class="section-content">
             <h2>Web & Mobile App Development</h2>
@@ -59,7 +59,7 @@
 
     <div class="section">
         <div class="section-icon">
-            <image src="../../SOFT.png" alt="Business Software Icon" >
+            <img src="../../SOFT.png" alt="Business Software Icon" >
         </div>
         <div class="section-content">
             <h2>Business Software Solutions</h2>
@@ -74,7 +74,7 @@
 
     <div class="section">
         <div class="section-icon">
-            <image src="../../MAIN.png" alt="Software Maintenance Icon" >
+            <img src="../../MAIN.png" alt="Software Maintenance Icon" >
         </div>
         <div class="section-content">
             <h2>Software Maintenance & Support</h2>
@@ -89,7 +89,7 @@
 
     <div class="section">
         <div class="section-icon">
-            <image src="../../CLOUD.png" alt="Cloud Solutions Icon" >
+            <img src="../../CLOUD.png" alt="Cloud Solutions Icon" >
         </div>
         <div class="section-content">
             <h2>Cloud Solutions & Hosting</h2>
@@ -104,7 +104,7 @@
 
     <div class="section">
         <div class="section-icon">
-            <image src="../../UI.png" alt="UI/UX Design Icon" >
+            <img src="../../UI.png" alt="UI/UX Design Icon" >
         </div>
         <div class="section-content">
             <h2>UI/UX Design</h2>
@@ -119,7 +119,7 @@
 
     <div class="section">
         <div class="section-icon">
-            <image src="../../TECH.png" alt="Software Maintenance Icon" >
+            <img src="../../TECH.png" alt="Software Maintenance Icon" >
         </div>
         <div class="section-content">
             <h2>Consulting & Technology Strategy</h2>
