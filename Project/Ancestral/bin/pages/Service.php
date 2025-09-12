@@ -5,110 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services | Ancestral</title>
     <link rel="stylesheet" href="../cascade/HomePage.css? <?php echo time(); ?>">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #ffffff;
-            color: #000000;
-        }
-
-       
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 50px 20px;
-        }
-
-        .section {
-            background: #f9f9f9;
-            margin: 20px 0;
-            padding: 30px 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-        }
-
-        .section-icon {
-            font-size: 2rem;
-            color: #b33f62;
-            flex-shrink: 0;
-        }
-
-        .section-content h2 {
-            margin-top: 0;
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-
-        .section-content ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .section-content ul li {
-            margin-bottom: 8px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .section-content ul li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #b33f62;
-        }
-
-        .get-started-btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            border: 1px solid #b33f62;
-            border-radius: 6px;
-            text-decoration: none;
-            color: #b33f62;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .get-started-btn:hover {
-            background-color: #b33f62;
-            color: #fff;
-        }
-
-    </style>
+    <link rel="stylesheet" href="../cascade/Service.css? <?php echo time(); ?>">
 </head>
 <body>
+<div class="bg-image"></div>
 
-<div class="header-container">  
-<header id = "main-header">
-        <h1>NCESTRAL
-            
-        </h1>
+<div class="header-container">
+    <header id="main-header">
+        <h1>ANCESTRAL</h1>
         <img src="../../Logo.svg" alt="Ancestral Logo" class="Logo">
-        
-
         <nav class="nav">
             <a href="Service.php">Services</a>
-            <a href = "#"> Blog/News </a>
+            <a href="#">Blog/News</a>
             <a href="About.php">About</a>
-            <a href="#" id = "Contact" >Contact</a>
-            
+            <a href="#" id="Contact">Contact</a>
             <a href="#" class="btn">Get Started</a>
-
         </nav>
     </header>
 </div>
 
-
-
 <div class="container">
-
     <div class="section">
-        <div class="section-icon">🤖</div>
+        <div class="section-icon">
+
+            <image src="../../AI.png" alt="AI Icon" >
+
+        </div>
         <div class="section-content">
             <h2>AI Solutions</h2>
             <ul>
@@ -121,7 +43,9 @@
     </div>
 
     <div class="section">
-        <div class="section-icon">📱</div>
+        <div class="section-icon">
+            <image src="../../WEB.png" alt="Web Development Icon" >
+        </div>
         <div class="section-content">
             <h2>Web & Mobile App Development</h2>
             <ul>
@@ -133,10 +57,10 @@
         </div>
     </div>
 
-    <img src="../../BackGround.jpg" class="bg-image" alt="Background Image" style="z-index: -100;" >
-
     <div class="section">
-        <div class="section-icon">💻</div>
+        <div class="section-icon">
+            <image src="../../SOFT.png" alt="Business Software Icon" >
+        </div>
         <div class="section-content">
             <h2>Business Software Solutions</h2>
             <ul>
@@ -149,7 +73,9 @@
     </div>
 
     <div class="section">
-        <div class="section-icon">🛠️</div>
+        <div class="section-icon">
+            <image src="../../MAIN.png" alt="Software Maintenance Icon" >
+        </div>
         <div class="section-content">
             <h2>Software Maintenance & Support</h2>
             <ul>
@@ -162,7 +88,9 @@
     </div>
 
     <div class="section">
-        <div class="section-icon">☁️</div>
+        <div class="section-icon">
+            <image src="../../CLOUD.png" alt="Cloud Solutions Icon" >
+        </div>
         <div class="section-content">
             <h2>Cloud Solutions & Hosting</h2>
             <ul>
@@ -175,7 +103,9 @@
     </div>
 
     <div class="section">
-        <div class="section-icon">🎨</div>
+        <div class="section-icon">
+            <image src="../../UI.png" alt="UI/UX Design Icon" >
+        </div>
         <div class="section-content">
             <h2>UI/UX Design</h2>
             <ul>
@@ -188,7 +118,9 @@
     </div>
 
     <div class="section">
-        <div class="section-icon">📈</div>
+        <div class="section-icon">
+            <image src="../../TECH.png" alt="Software Maintenance Icon" >
+        </div>
         <div class="section-content">
             <h2>Consulting & Technology Strategy</h2>
             <ul>
@@ -199,8 +131,6 @@
             <a href="#" class="get-started-btn">Get Started</a>
         </div>
     </div>
-
 </div>
-
 </body>
 </html>

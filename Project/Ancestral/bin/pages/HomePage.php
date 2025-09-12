@@ -42,7 +42,7 @@
 
         <nav class="nav">
             <a href="Service.php">Services</a>
-            <a href = "#"> Blog/News </a>
+            <a href = "Blog.php"> Blog/News </a>
             <a href="About.php">About</a>
             <a href="#" id = "Contact" >Contact</a>
             
@@ -55,22 +55,32 @@
 
 
 
-    <img src="../../BackGround.jpg" class="bg-image" alt="Background Image" style="z-index: -100;" >
+    <img src="../../BackGround5.jpg" class="bg-image" alt="Background Image" style="z-index: -100;" >
+
+
+
+
+
 
 
     <div class="sectionHire">
     <div class="left-content">
-        <h1>Hiring is hard.<br>We're here to help.</h1>
-        <p>Whether you’re scaling for high-volume roles, managing overwhelming application volumes, or hiring for specialized positions, our platform can help.</p>
-        <button>Book demo</button>
+        <h1>Welcome to <span>Ancestral</span></h1>
+        <p>At Ancestral, we’re not just another tech company — we’re your trusted partner in transforming ideas into powerful digital solutions. 
+        From cutting-edge websites and mobile apps to AI-driven systems and IT services, we keep innovation, scalability, and results at the core of everything we do.</p>
+        <a href = "#" class="btn">About us</a>
+        <a href = "Contact.php" class="btn" id = "ContactUS">Contact us</a>
     </div>
     <div class="right-content">
+        <video autoplay muted loop playsinline class="bg-vdw">
+    <source src="../../background3.mp4" type="video/mp4">
+  </video>
         <div class="assistant-message">
-            Hi User, welcome to your interview. I'm the AI assistant who will be conducting the interview with you. Just relax and chat with me like you would in any regular conversation.
+            Hi, welcome to your interview. I'm the AI assistant who will be conducting the interview with you. Just relax and chat with me like you would in any regular conversation.
         </div>
         <div class="video-box">
             <div class="video-placeholder"></div>
-            <div>AI Logo Placeholder</div>
+            <div style = "text-shadow : #000 2px 2px 4px "><b>AI Logo Placeholder</b></div>
         </div>
     </div>
 </div>
@@ -90,7 +100,7 @@
     <div class="features">
         <div class="feature">
             <div class="feature-icon">
-              <image src="../../Time.png" alt="Time Icon" >
+              <img src="../../Time.png" alt="Time Icon" >
             </div>
             <h3>Save time</h3>
             <p>With Ancestral AI, you can automate key processes in the time it used to take for just one task.</p>
@@ -98,7 +108,7 @@
 
         <div class="feature">
             <div class="feature-icon">
-              <image src="../../Money.png" alt="Money Icon" >
+              <img src="../../Money.png" alt="Money Icon" >
             </div>
             <h3>Save money</h3>
             <p>Cut project costs by up to 80% through smart automation and optimized workflows.</p>
@@ -106,7 +116,7 @@
 
         <div class="feature">
             <div class="feature-icon">
-              <image src="../../Rocket.png" alt="Outcome Icon" >
+              <img src="../../Rocket.png" alt="Outcome Icon" >
             </div>
             <h3>Drive outcomes</h3>
             <p>Our solutions ensure faster results and improved business performance.</p>
@@ -114,7 +124,7 @@
 
         <div class="feature">
             <div class="feature-icon">
-              <image src="../../BarChart.png" alt="Results Icon" >
+              <img src="../../BarChart.png" alt="Results Icon" >
 
             </div>
             <h3>See results</h3>
@@ -123,6 +133,50 @@
     </div>
 
     <a href="contact.html" class="cta-button">Get Started</a>
+</section>
+
+
+
+
+<section class="testimonial-section">
+    <h2 class="testimonial-header">What our Client says</h2>
+    
+    <button class="become-client">Become a Client</button>
+
+    <div class="testimonial-container">
+        <!-- Left side: Image -->
+        <div class="testimonial-image">
+            <img src="client-image.jpg" alt="Client Testimonial">
+        </div>
+
+        <!-- Right side: Text -->
+        <div class="testimonial-content">
+            <h4>Fitness App Development</h4>
+            <p>
+                Ancestral team helped us build our flagship app. Working with Ancestral was a brilliant experience. 
+                The team was knowledgeable and they were to the point with time and delivery. 
+                What I liked most is that they were not hesitant to propose better ways. 
+                Wonderful people to work with for any technical requirement.
+            </p>
+
+            <div class="testimonial-author">
+                <img src="author.jpg" alt="Aurobinda De">
+                <div>
+                    <strong>Aurobinda De</strong>
+                    <span>Founder, La Morks</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dots Navigation -->
+    <div class="testimonial-dots">
+        <span></span>
+        <span></span>
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+    </div>
 </section>
 
 
@@ -145,6 +199,34 @@
         
         </center>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <section>
@@ -209,36 +291,161 @@
 
 
 
+    <section class="connect-section">
+  <div class="connect-container">
 
-<footer id = "main-footer" >
-  <div style="max-width: 1000px; margin: auto; display: flex; justify-content: space-between; flex-wrap: wrap; padding: 0 20px;">
-
-    <!-- Left: Contact Info -->
-    <div style="margin-bottom: 20px;">
-      <h3 style="margin-bottom: 10px;">Contact</h3>
-      <p>Email: <a href="mailto:info@ancestral.com" style="color: #2c2c2c; text-decoration: none;">info@ancestral.com</a></p>
-      <p>Phone: +880123456789</p>
+    <!-- Left Side: Contact Information -->
+    <div class="connect-left">
+      <h2>Connect with Ancestral</h2>
+      <p>Ready to take the first step towards unlocking opportunities, realizing goals, and embracing innovation? We're here and eager to connect.</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <span class="icon">📞</span>
+          <span>+91 8910704554</span>
+        </div>
+        <div class="contact-item">
+          <span class="icon">📧</span>
+          <span>ask@ancestral.com</span>
+        </div>
+      </div>
     </div>
 
-    <!-- Right: Social Links -->
-    <div style="margin-bottom: 20px;">
-      <h3 style="margin-bottom: 10px;">Follow Us</h3>
-      <p>
-        <a href="#" style="color: #2c2c2c; text-decoration: none; margin-right: 15px;">Instagram</a>
-        <a href="#" style="color: #2c2c2c; text-decoration: none; margin-right: 15px;">Facebook</a>
-        <a href="#" style="color: #2c2c2c; text-decoration: none;">YouTube</a>
-      </p>
+    <!-- Right Side: Form -->
+    <div class="connect-right">
+      <h3>Your Success Starts Here!</h3>
+      <form class="contact-form">
+        <div class="form-row">
+          <input type="text" placeholder="Full Name *" required>
+          <input type="email" placeholder="Email Address *" required>
+        </div>
+        <div class="form-row">
+          <input type="tel" placeholder="+880" required>
+          <select required>
+            <option value="">Select your budget</option>
+            <option>Under $1000</option>
+            <option>$1000 - $5000</option>
+            <option>$5000 - $10,000</option>
+            <option>Above $10,000</option>
+          </select>
+        </div>
+        <textarea placeholder="Message *" required></textarea>
+        <button type="submit"  class = "submit-btn">Submit</button>
+      </form>
     </div>
 
   </div>
+</section>
 
-  <!-- Bottom Line -->
-  <div style="margin-top: 20px; font-size: 14px; color: #555;">
-    © 2025 Ancestral. All Rights Reserved. |
-    <a href="#" style="color: #555; text-decoration: none;">Terms of Service</a> |
-    <a href="#" style="color: #555; text-decoration: none;">Privacy Policy</a>
+
+
+
+
+
+<footer class="footer"  id="footer" >
+  <div class="footer-top">
+    <h1 class="footer-heading">QUICK LINKS</h1>
+    <div class="footer-columns">
+
+      <!-- Web Development -->
+      <div class="footer-column">
+        <h3>Web Development</h3>
+        <ul>
+          <li>React JS</li>
+          <li>Vue JS</li>
+          <li>Angular JS</li>
+          <li>Node JS</li>
+          <li>Wordpress</li>
+          <li>Python</li>
+        </ul>
+        <h3>E-Commerce</h3>
+        <ul>
+          <li>Magento</li>
+          <li>Shopify</li>
+          <li>Woocommerce</li>
+        </ul>
+      </div>
+
+      <!-- Mobile App -->
+      <div class="footer-column">
+        <h3>Mobile App</h3>
+        <ul>
+          <li>Android</li>
+          <li>IOS</li>
+          <li>React Native</li>
+          <li>Ionic</li>
+          <li>Flutter</li>
+        </ul>
+        <h3>IOT</h3>
+        <ul>
+          <li>IOT Application</li>
+          <li>Embedded Systems</li>
+          <li>Wearable Device</li>
+        </ul>
+      </div>
+
+      <!-- Cloud Solution -->
+      <div class="footer-column">
+        <h3>Cloud Solution</h3>
+        <ul>
+          <li>AWS</li>
+          <li>Google Cloud</li>
+          <li>Firebase</li>
+          <li>Azure</li>
+        </ul>
+        <h3>AI & ML</h3>
+        <ul>
+          <li>ML</li>
+          <li>Natural Language</li>
+          <li>Computer Vision</li>
+          <li>AI-Powered Chatbot</li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div class="footer-column">
+        <h3>Our Company</h3>
+        <ul>
+          <li>About Us</li>
+          <li>Career</li>
+          <li>Blogs</li>
+          <li>Contact Us</li>
+        </ul>
+        <h3>Certification</h3>
+        <div class="certification">
+          <img src="iso.png" alt="ISO Certified">
+          <img src="cert2.png" alt="Certification">
+          <div class="review">Reviewed on Clutch - 4 Reviews ★★★★★</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-contact">
+    <div class="contact-item">
+      <span>📞 Call Any Time</span>
+      <p>+91 7003372738</p>
+    </div>
+    <div class="contact-item">
+      <span>📍 Find Us</span>
+      <p>ASO-104, Astra Towers, Kolkata - 135</p>
+    </div>
+    <div class="contact-item">
+      <span>📧 Email Us</span>
+      <p>ask@yeasitech.com</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © 2025 All Rights Reserved</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Cookie Settings</a>
+    </div>
   </div>
 </footer>
+
 
 
     
@@ -252,7 +459,7 @@
 contactView.addEventListener('click', function(event) {
     event.preventDefault();  // this must run first
     setTimeout(() => {       // force browser to wait before scrolling
-        document.getElementById("main-footer").scrollIntoView({ behavior: 'smooth' });
+        document.getElementById("footer").scrollIntoView({ behavior: 'smooth' });
     }, 0);
   
 });

@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #000;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #b33f62;
+}
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.nav a.active {
+  color: #b33f62;
+  font-weight: bold;
+}
+
+.btn {
+  border: 1px solid #b33f62;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: #b33f62;
+}
+
+.hero {
+  background: url("../../blog-hero.jpg") no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 80px 10%;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.blog-section {
+  padding: 60px 10%;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.blog-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  overflow: hidden;
+  width: calc(33.333% - 20px);
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+.blog-content .category {
+  color: #b33f62;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.blog-content h3 {
+  margin: 10px 0;
+  font-size: 1.4rem;
+}
+
+.blog-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 14px;
+  border: 1px solid #b33f62;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #b33f62;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.read-more:hover {
+  background: #b33f62;
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #f1f1f1;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .blog-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-card {
+    width: 100%;
+  }
+}
