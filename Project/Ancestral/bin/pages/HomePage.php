@@ -1,3 +1,53 @@
+<?php
+
+session_start();
+
+
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,8 +71,8 @@
 
 
 
-    <button type = "submit" class = "logout" onclick="location.href='Signin.php';">
-    <img src="../../Logout.png" alt="icon" style="width:25px; height:25px; vertical-align:left;">        
+    <button id = "logbtn" type = "submit" class = "logout" onclick="location.href='Signin.php';">
+    <img id ="log" src="../../Logout2.png" alt="icon" style="width:25px; height:25px; vertical-align:left;">        
     Sign in
 </button>
 
@@ -37,7 +87,7 @@
         <h1>NCESTRAL
             
         </h1>
-        <img src="../../Logo.svg" alt="Ancestral Logo" class="Logo">
+        <img  id ="logo" src="../../Logo.svg" alt="Ancestral Logo" class="Logo">
         
 
         <nav class="nav">
@@ -63,9 +113,9 @@
 
 
 
-    <div class="sectionHire">
+  <div class="sectionHire">
     <div class="left-content">
-        <h1>Welcome to <span>Ancestral</span></h1>
+        <h1 id ="welcome">Welcome to <span id = "COMname">Ancestral</span></h1>
         <p>At Ancestral, we’re not just another tech company — we’re your trusted partner in transforming ideas into powerful digital solutions. 
         From cutting-edge websites and mobile apps to AI-driven systems and IT services, we keep innovation, scalability, and results at the core of everything we do.</p>
         <a href = "#" class="btn">About us</a>
@@ -73,8 +123,8 @@
     </div>
     <div class="right-content">
         <video autoplay muted loop playsinline class="bg-vdw">
-    <source src="../../background3.mp4" type="video/mp4">
-  </video>
+             <source src="../../background3.mp4" type="video/mp4">
+        </video>
         <div class="assistant-message">
             Hi, welcome to your interview. I'm the AI assistant who will be conducting the interview with you. Just relax and chat with me like you would in any regular conversation.
         </div>
@@ -83,7 +133,7 @@
             <div style = "text-shadow : #000 2px 2px 4px "><b>AI Logo Placeholder</b></div>
         </div>
     </div>
-</div>
+</div> 
 
 
     <div id = "vdiv" >
@@ -139,14 +189,17 @@
 
 
 <section class="testimonial-section">
+
+
+
+
+
     <h2 class="testimonial-header">What our Client says</h2>
-    
-    <button class="become-client">Become a Client</button>
 
     <div class="testimonial-container">
         <!-- Left side: Image -->
         <div class="testimonial-image">
-            <img src="client-image.jpg" alt="Client Testimonial">
+            <img src="../../Client.png" alt="Client Testimonial">
         </div>
 
         <!-- Right side: Text -->
@@ -160,23 +213,19 @@
             </p>
 
             <div class="testimonial-author">
-                <img src="author.jpg" alt="Aurobinda De">
+                <img src="../../Client2.png" alt="Aurobinda De">
                 <div>
-                    <strong>Aurobinda De</strong>
+                    <strong>Jessica Smith</strong>
                     <span>Founder, La Morks</span>
                 </div>
             </div>
         </div>
     </div>
 
+
+    <video src="../../background4.mp4" class="bg-video-test" autoplay muted loop playsinline></video>
     <!-- Dots Navigation -->
-    <div class="testimonial-dots">
-        <span></span>
-        <span></span>
-        <span class="active"></span>
-        <span></span>
-        <span></span>
-    </div>
+
 </section>
 
 
@@ -412,8 +461,8 @@
         </ul>
         <h3>Certification</h3>
         <div class="certification">
-          <img src="iso.png" alt="ISO Certified">
-          <img src="cert2.png" alt="Certification">
+          <img src="#" alt="ISO Certified">
+          <img src="#" alt="Certification">
           <div class="review">Reviewed on Clutch - 4 Reviews ★★★★★</div>
         </div>
       </div>
@@ -453,7 +502,7 @@
 
 
 
-    <script src="../interactivity/HomePage.js"></script>
+    <script src="../interactivity/HomePage.js? <?php echo time(); ?>"></script>
     <script>
      let contactView = document.getElementById("Contact");
 contactView.addEventListener('click', function(event) {

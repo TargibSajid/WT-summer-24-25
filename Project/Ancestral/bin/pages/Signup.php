@@ -1,3 +1,60 @@
+<?php
+
+session_start();
+
+require 'Config.php';
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+{
+    $fullname = $_POST["fullname"] ;
+    $password = $_POST["password"] ;
+    $username = $_POST["username"]  ;
+    $email = $_POST["email"] ;
+    $phonenumber = $_POST["phone"];
+
+
+    $sql = "INSERT INTO users (full_name, user_name, email, password_hash) VALUES ('$fullname','$username','$email', '$password')";
+
+    if($con->query($sql) == true)
+    {
+        echo  "registration complited";
+
+        header("Location: HomePage.php");
+    }
+    else{
+
+        echo "Error: " . $sql . "<br>" . $con->error;
+
+    }
+
+
+
+}
+
+$con->close();
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +73,7 @@
 
     <div class="signup-container">
         <h2>Create Your Account</h2>
-        <form action="/register" method="POST">
+        <form action="Signup.php" method="POST">
             <div class="form-group">
                 <label for="fullname">Full Name</label>
                 <input type="text" id="fullname" name="fullname" placeholder="Name" required>
