@@ -143,8 +143,6 @@ header {
 
             right: 50px ;
 
-            cursor: pointer;
-
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 
             border: none;
@@ -478,14 +476,18 @@ header {
     .footer {
   background: #faf8f8;
   padding: 40px 60px;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .footer-heading {
   text-align: center;
-  font-size: 18px;
+  font-size: 40px;
+  font-family :Arial, Helvetica, sans-serif;
   margin-bottom: 30px;
   letter-spacing: 1px;
+  font-weight: bold;
+  color: rgb(84, 84, 84);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .footer-columns {
@@ -501,7 +503,7 @@ header {
 }
 
 .footer-column h3 {
-  font-size: 16px;
+  font-size: 21px;
   margin-bottom: 10px;
   font-weight: bold;
 }
@@ -512,10 +514,12 @@ header {
   margin: 0 0 20px 0;
 }
 
-.footer-column ul li {
-  margin: 5px 0;
+.footer-column ul :hover {
   cursor: pointer;
+  color: blueviolet;
+  transition: 0.8s;
 }
+
 
 .certification img {
   width: 60px;
@@ -536,10 +540,15 @@ header {
   text-align: center;
 }
 
+
 .contact-item span {
-  display: block;
-  font-size: 14px;
-  margin-bottom: 5px;
+  font-size: 20px;
+  margin: 5px;
+  
+}
+.contact-item
+{
+  display: flex;
 }
 
 .footer-bottom {

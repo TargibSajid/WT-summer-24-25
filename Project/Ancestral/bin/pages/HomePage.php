@@ -341,7 +341,7 @@
 
 
 
-<footer class="footer"  id="footer" >
+<footer class="footer"  id="footer">
   <div class="footer-top">
     <h1 class="footer-heading">QUICK LINKS</h1>
     <div class="footer-columns">

@@ -1,0 +1,139 @@
+    body {
+        background: #f5f7fb;
+        color: #111;
+        font-family: Arial, sans-serif;
+    }
+
+
+
+
+    main.wrapper {
+        margin: 36px auto;
+        padding: 20px;
+        margin-top: 180px;
+        background-color:transparent;
+        max-width: 100%;
+
+        
+
+    }
+
+    .service-page {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    .left {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+        width: 600px;
+        
+    }
+
+    .right {
+        width: 380px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    }
+
+    .field {
+        margin-bottom: 12px;
+    }
+
+    label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    textarea,
+    select,
+    input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        box-sizing: border-box;
+        font-size: 18px;
+    }
+
+    input[type="file"]{
+        font-size: 16px;
+        border-radius: 8px;
+        border:none;
+        outline: none;
+    }
+
+    .get-started-btn {
+        background: #5b21b6;
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    .small-note {
+        font-size: 13px;
+        color: #666;
+        margin-top: 6px;
+    }
+
+    .meeting-options {
+        margin-top: 10px;
+        background: #fbfdff;
+        border: 1px solid #e6f0ff;
+        padding: 12px;
+        border-radius: 8px;
+    }
+
+    .errors {
+        background: #fff2f2;
+        border: 1px solid #ffbcbc;
+        padding: 10px;
+        color: #8b0000;
+        margin-bottom: 12px;
+        border-radius: 6px;
+    }
+
+    .success {
+        background: #f0fff6;
+        border: 1px solid #b8f1c1;
+        padding: 10px;
+        color: #006400;
+        margin-bottom: 12px;
+        border-radius: 6px;
+    }
+
+    .back-link {
+        display: inline-block;
+        margin-top: 12px;
+        color: #444;
+        text-decoration: underline;
+    }
+
+.additional-section {
+    flex: 1 1 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.additional-section>div {
+    flex: 1 1 300px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

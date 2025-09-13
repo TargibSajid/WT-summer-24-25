@@ -1,0 +1,102 @@
+-- 1. Users Table
+CREATE TABLE Users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    phone_number VARCHAR(20),
+    country VARCHAR(100),
+    city VARCHAR(100),
+    address TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- 2. Services Table
+CREATE TABLE Services (
+    service_id INT AUTO_INCREMENT PRIMARY KEY,
+    service_name VARCHAR(150) NOT NULL,
+    description TEXT,
+    technologies_used JSON,
+    pricing_model ENUM('fixed', 'hourly', 'custom') DEFAULT 'custom',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- 3. Service Requests (junction table between Users and Services)
+CREATE TABLE Service_Requests (
+    request_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    service_id INT NOT NULL,
+    requirement_details TEXT,
+    budget DECIMAL(12,2),
+    timeline VARCHAR(100),
+    status ENUM('pending', 'validated', 'in-progress', 'completed', 'rejected') DEFAULT 'pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (service_id) REFERENCES Services(service_id) ON DELETE CASCADE
+);
+
+-- 4. Meetings Table
+CREATE TABLE Meetings (
+    meeting_id INT AUTO_INCREMENT PRIMARY KEY,
+    request_id INT NOT NULL,
+    user_id INT NOT NULL,
+    meeting_type ENUM('face-to-face', 'online') NOT NULL,
+    platform ENUM('Office', 'Zoom', 'Skype', 'WhatsApp', 'Discord', 'GoogleMeet') DEFAULT 'Office',
+    meeting_date DATE,
+    meeting_time TIME,
+    status ENUM('pending', 'confirmed', 'completed', 'cancelled') DEFAULT 'pending',
+    notes TEXT,
+    FOREIGN KEY (request_id) REFERENCES Service_Requests(request_id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
+);
+
+-- 5. Service Providers Table
+CREATE TABLE Service_Providers (
+    provider_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    phone_number VARCHAR(20),
+    specialization VARCHAR(150),
+    available_slots JSON,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- 6. Provider Assignments (which provider is assigned to which request)
+CREATE TABLE Provider_Assignments (
+    assignment_id INT AUTO_INCREMENT PRIMARY KEY,
+    provider_id INT NOT NULL,
+    request_id INT NOT NULL,
+    role ENUM('lead', 'support', 'consultant') DEFAULT 'support',
+    assigned_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (provider_id) REFERENCES Service_Providers(provider_id) ON DELETE CASCADE,
+    FOREIGN KEY (request_id) REFERENCES Service_Requests(request_id) ON DELETE CASCADE
+);
+
+-- 7. Payments Table
+CREATE TABLE Payments (
+    payment_id INT AUTO_INCREMENT PRIMARY KEY,
+    request_id INT NOT NULL,
+    user_id INT NOT NULL,
+    amount DECIMAL(12,2) NOT NULL,
+    payment_method ENUM('Card', 'PayPal', 'bKash', 'Cash', 'BankTransfer') DEFAULT 'Cash',
+    status ENUM('pending', 'paid', 'refunded') DEFAULT 'pending',
+    transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (request_id) REFERENCES Service_Requests(request_id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
+);
+
+-- 8. Feedback Table
+CREATE TABLE Feedback (
+    feedback_id INT AUTO_INCREMENT PRIMARY KEY,
+    request_id INT NOT NULL,
+    user_id INT NOT NULL,
+    rating INT CHECK (rating BETWEEN 1 AND 5),
+    comments TEXT,
+    submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (request_id) REFERENCES Service_Requests(request_id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
+);
