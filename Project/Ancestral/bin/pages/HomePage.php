@@ -82,7 +82,12 @@ if (isset($_SESSION['username'])) {
             <a href="About.php">About</a>
             <a href="#" id = "Contact" >Contact</a>
             
-            <a href="#" class="btn">Get Started</a>
+            <?php if (isset($_SESSION['username'])): ?>
+            <a href="Service.php" class="btn">Get Started</a>
+            <?php else: ?>
+            <a href="Signin.php" class="btn" onclick = "alert('you are not logged in \n please login to procced through the service section')">Get Started</a>
+            <?php endif; ?>
+
 
         </nav>
     </header>
@@ -104,7 +109,7 @@ if (isset($_SESSION['username'])) {
         <h1 id ="welcome">Welcome to <span id = "COMname">Ancestral</span></h1>
         <p>At Ancestral, we’re not just another tech company — we’re your trusted partner in transforming ideas into powerful digital solutions. 
         From cutting-edge websites and mobile apps to AI-driven systems and IT services, we keep innovation, scalability, and results at the core of everything we do.</p>
-        <a href = "#" class="btn">About us</a>
+        <a href = "About.php" class="btn">About us</a>
         <a href = "Contact.php" class="btn" id = "ContactUS">Contact us</a>
     </div>
     <div class="right-content">
@@ -167,8 +172,16 @@ if (isset($_SESSION['username'])) {
             <p>Track your progress, eliminate inefficiencies, and enhance your project quality.</p>
         </div>
     </div>
+     <?php if (isset($_SESSION['username'])): ?>         
+    <a href="Service.php" class="cta-button">Get Started</a>
 
-    <a href="contact.html" class="cta-button">Get Started</a>
+      <?php else: ?>
+
+    <a href="Signin.php" class="cta-button">Get Started</a>
+
+    <?php endif;?>
+
+
 </section>
 
 
@@ -219,7 +232,15 @@ if (isset($_SESSION['username'])) {
     <section class="hero">
         <h2>Empowering Businesses Through Technology</h2>
         <p>We provide cutting-edge software solutions and services to help businesses thrive.</p>
-        <a href="#" class="cta-button">Get Started</a>
+
+             <?php if (isset($_SESSION['username'])): ?>         
+    <a href="Service.php" class="cta-button">Get Started</a>
+
+      <?php else: ?>
+
+    <a href="Signin.php" class="cta-button">Get Started</a>
+
+    <?php endif;?>
         
 
         
@@ -230,6 +251,8 @@ if (isset($_SESSION['username'])) {
         <p>With a focus on innovation and customer satisfaction, we deliver tailor-made solutions that drive growth and efficiency.</p>
         
         <center>
+
+        
           <a href="About.php" class="cta-button" style = "top : 30px">Learn More</a>
         
         </center>
@@ -317,7 +340,7 @@ if (isset($_SESSION['username'])) {
     <div class="ai-cta-box">
         <h2>Are you ready to evaluate candidates at scale, reduce bias and drive efficiency?</h2>
         <button>Try an AI interview</button>
-        <button>Contact Sales</button>
+        <button onclick = "location.href = 'Contact.php'">Contact Sales</button>
     </div>
 </div>
 

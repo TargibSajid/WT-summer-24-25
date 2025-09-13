@@ -1,3 +1,22 @@
+<?php
+
+    session_start();
+
+    if (isset($_SESSION['username'])) {
+    $username = $_SESSION['username'];
+} elseif (isset($_COOKIE['username'])) {
+    $username = $_COOKIE['username'];
+}
+
+
+?>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +33,30 @@
 
 
 
+<?php if (isset($_SESSION['username'])): ?>
+
+      <a id = "User">   </a>
+
+        <button id = "logbtn" type = "submit" class = "logout" onclick="location.href='Logout.php';">
+    <img id ="log" src="../../Logout2.png" alt="icon" style="width:25px; height:25px; vertical-align:left;">        
+    Sing out
+</button>
+          <script>
+
+          const usernameFromPHP = <?php echo json_encode($username); ?>;
+          
+          
+          </script>";
+
+
+<?php else: ?>
     <button id = "logbtn" type = "submit" class = "logout" onclick="location.href='Signin.php';">
     <img id ="log" src="../../Logout2.png" alt="icon" style="width:25px; height:25px; vertical-align:left;">        
     Sign in
 </button>
+
+
+<?php endif; ?>
 
 </div>
 
@@ -26,19 +65,25 @@
 
 <div class="header-container">
     <header id="main-header">
-        <h1>ANCESTRAL</h1>
+        <h1 onclick = "location.href = 'HomePage.php'">NCESTRAL</h1>
         <img src="../../Logo.svg" alt="Ancestral Logo" class="Logo">
         <nav class="nav">
             <a href="Service.php">Services</a>
-            <a href="#">Blog/News</a>
+            <a href="Blog.php">Blog/News</a>
             <a href="About.php">About</a>
-            <a href="#" id="Contact">Contact</a>
-            <a href="#" class="btn">Get Started</a>
+            <a href="Contact.php" id="Contact">Contact</a>
+            <a href="#" class="btn" onclick = >Get Started</a>
         </nav>
     </header>
 </div>
 
 <div class="container">
+
+   <h1> Looking for a Service ? </h1> 
+
+
+
+
     <div class="section">
         <div class="section-icon">
 
@@ -283,8 +328,8 @@
         </ul>
         <h3>Certification</h3>
         <div class="certification">
-          <img src="iso.png" alt="ISO Certified">
-          <img src="cert2.png" alt="Certification">
+          <img src="#" alt="ISO Certified">
+          <img src="#" alt="Certification">
           <div class="review">Reviewed on Clutch - 4 Reviews ★★★★★</div>
         </div>
       </div>
@@ -321,7 +366,7 @@
 
 
 
-<Script src="../interactivity/Service.js"></Script>
+<Script src="../interactivity/Service.js ? <?php echo time(); ?>"></Script>
 
 </body>
 </html>
