@@ -1,41 +1,54 @@
 <?php
-
 session_start();
+require 'Config.php'; // Make sure $con is your mysqli connection
 
-require 'Config.php';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $fullname    = trim($_POST["fullname"]);
+    $username    = trim($_POST["username"]);
+    $email       = trim($_POST["email"]);
+    $password    = $_POST["password"];
+    $phonenumber = trim($_POST["phone"]);
+
+    $stmt = $con->prepare("SELECT user_id FROM users WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        echo "❌ Email already registered!";
+        exit;
+    }
+    $stmt->close();
+
+    $password_hash = password_hash($password, PASSWORD_DEFAULT);
+
+    $stmt = $con->prepare("INSERT INTO users (full_name, user_name, email, password_hash, phone_number) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssss", $fullname, $username, $email, $password_hash, $phonenumber);
+
+    if ($stmt->execute()) {
+
+        $_SESSION['username'] = $username;
+        $_SESSION['email']    = $email;
+
+        setcookie("username", $username, time() + (86400*7), "/");
 
 
-if ($_SERVER["REQUEST_METHOD"] == "POST")
-{
-    $fullname = $_POST["fullname"] ;
-    $password = $_POST["password"] ;
-    $username = $_POST["username"]  ;
-    $email = $_POST["email"] ;
-    $phonenumber = $_POST["phone"];
-
-
-    $sql = "INSERT INTO users (full_name, user_name, email, password_hash) VALUES ('$fullname','$username','$email', '$password')";
-
-    if($con->query($sql) == true)
-    {
-        echo  "registration complited";
 
         header("Location: HomePage.php");
+        exit;
+    } else {
+        echo "Error: " . $stmt->error;
+
+        
     }
-    else{
 
-        echo "Error: " . $sql . "<br>" . $con->error;
-
-    }
-
-
-
+    $stmt->close();
 }
 
 $con->close();
-
-
 ?>
+
 
 
 

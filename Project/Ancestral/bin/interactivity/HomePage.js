@@ -9,6 +9,8 @@ window.addEventListener('scroll', function() {
 
 console.log("JS is linked");
 
+console.log(document.cookie);
+
 const welcomeMessage = document.getElementById('welcome');
 const companyName = document.getElementById('COMname');
 const logo = document.getElementById('logo');

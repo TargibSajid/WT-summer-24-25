@@ -1,48 +1,16 @@
 <?php
 
 session_start();
-
+if (isset($_SESSION['username'])) {
+    echo "<script>alert('Registration completed successfully!');</script>";
+} else {
+    echo "You are not logged in.";
+}
 
 
 
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
