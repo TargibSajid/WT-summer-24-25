@@ -2,10 +2,11 @@
 
 session_start();
 if (isset($_SESSION['username'])) {
-    echo "<script></script>";
-} else {
-    echo "You are not logged in.";
+    $username = $_SESSION['username'];
+} elseif (isset($_COOKIE['username'])) {
+    $username = $_COOKIE['username'];
 }
+
 
 
 
@@ -37,10 +38,20 @@ if (isset($_SESSION['username'])) {
 <div class="logout-container" >
 
 <?php if (isset($_SESSION['username'])): ?>
-        <button id = "logbtn" type = "submit" class = "logout" onclick="location.href='Signin.php';">
+
+      <a id = "User">  </a>
+
+        <button id = "logbtn" type = "submit" class = "logout" onclick="location.href='Logout.php';">
     <img id ="log" src="../../Logout2.png" alt="icon" style="width:25px; height:25px; vertical-align:left;">        
     Sing out
 </button>
+          <script>
+
+          const usernameFromPHP = <?php echo json_encode($username); ?>;
+          
+          
+          </script>";
+
 
 <?php else: ?>
     <button id = "logbtn" type = "submit" class = "logout" onclick="location.href='Signin.php';">
@@ -59,7 +70,7 @@ if (isset($_SESSION['username'])) {
 
 <div class="header-container">  
 <header id = "main-header">
-        <h1>NCESTRAL
+        <h1 onclick = "location.href = 'HomePage.php'">NCESTRAL
             
         </h1>
         <img  id ="logo" src="../../Logo.svg" alt="Ancestral Logo" class="Logo">

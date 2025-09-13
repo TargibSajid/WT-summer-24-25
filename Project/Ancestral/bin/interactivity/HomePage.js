@@ -51,6 +51,20 @@ btnlogout.addEventListener("mouseleave", function() {
 });
 
 
+    const user = document.getElementById("User");
+
+
+    if (usernameFromPHP) {
+        // If logged in
+        user.textContent =  usernameFromPHP;
+        user.href = "Track.php"; // Redirect to profile or homepage
+    } else {
+        // If not logged in
+        user.textContent = "Sign In";
+        user.href = "signup.php";
+    }
+
+
 
 
 
