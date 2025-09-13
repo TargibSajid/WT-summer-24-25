@@ -2,7 +2,7 @@
 
 session_start();
 if (isset($_SESSION['username'])) {
-    echo "<script>alert('Registration completed successfully!');</script>";
+    echo "<script></script>";
 } else {
     echo "You are not logged in.";
 }
@@ -36,13 +36,20 @@ if (isset($_SESSION['username'])) {
 
 <div class="logout-container" >
 
+<?php if (isset($_SESSION['username'])): ?>
+        <button id = "logbtn" type = "submit" class = "logout" onclick="location.href='Signin.php';">
+    <img id ="log" src="../../Logout2.png" alt="icon" style="width:25px; height:25px; vertical-align:left;">        
+    Sing out
+</button>
 
-
-
+<?php else: ?>
     <button id = "logbtn" type = "submit" class = "logout" onclick="location.href='Signin.php';">
     <img id ="log" src="../../Logout2.png" alt="icon" style="width:25px; height:25px; vertical-align:left;">        
     Sign in
 </button>
+
+
+<?php endif; ?>
 
 </div>
 
