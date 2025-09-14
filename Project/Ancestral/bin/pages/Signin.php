@@ -14,6 +14,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
     $result = $stmt->get_result();
 
+
+
+
+
+        $stmtAD = $con->prepare("SELECT admin_id, username, email, password
+                           FROM admin
+                           WHERE email = ?");
+    $stmtAD->bind_param("s", $email);
+    $stmtAD->execute();
+    $resultAD = $stmtAD->get_result();
+
+
     if ($result->num_rows === 1) {
         $row = $result->fetch_assoc();
 
@@ -28,9 +40,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: HomePage.php");
             exit;
         } else {
-            echo "<p style='color:red;'>❌ Wrong password!</p>";
+            echo "<p style='color:red;'>❌ Wrong password USer!</p>";
         }
-    } else {
+    }
+    
+    else if($resultAD->num_rows === 1) {
+        $row = $resultAD->fetch_assoc();
+
+        if ($password === $row['password']) {
+            $_SESSION['adminname'] = $row['username'];
+            $_SESSION['adminemail'] = $row['email'];
+            $_SESSION['admin_id'] = $row['admin_d'];
+
+
+            setcookie("username", $row['user_name'], time() + (86400 * 7), "/");
+
+            header("Location: Admin.php");
+            exit;
+        } else {
+            echo "<p style='color:red;'>❌ Wrong password admin!</p>";
+        }
+    }
+    
+    
+    else {
         echo "<p style='color:red;'>❌ No account found with that email!</p>";
     }
 
