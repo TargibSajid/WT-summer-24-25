@@ -39,6 +39,8 @@ console.log("HEllo");
 
     const user = document.getElementById("User");
 
+    console.log(usernameFromPHP);
+
 
     if (usernameFromPHP) {
         // If logged in
@@ -54,10 +56,5 @@ console.log("HEllo");
     console.log(document.cookie);
 
 
-    export function  selectService(service_id)
-    {
 
-        console.log(service_id);
-      
-    }
 

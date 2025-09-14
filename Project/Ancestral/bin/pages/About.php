@@ -4,79 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Ancestral</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Optional external CSS -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        header {
-            background-color: #4a148c;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            padding: 40px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-        h2 {
-            color: #4a148c;
-            margin-bottom: 15px;
-        }
-        .team {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .team-member {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            width: 220px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        .team-member img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-        footer {
-            text-align: center;
-            background: #4a148c;
-            color: white;
-            padding: 20px;
-            margin-top: 40px;
-        }
-        a.cta-button {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: #4a148c;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        a.cta-button:hover {
-            background: #6a1b9a;
-        }
-    </style>
+    <link rel="stylesheet" href="../cascade/HomePage.css? <?php echo time(); ?>">
+    <link rel="stylesheet" href="../cascade/About.css? <?php echo time(); ?>"><!-- Optional external CSS -->
 </head>
 <body>
 
-    <header>
-        <h1>About Ancestral</h1>
-        <p>Building intelligent solutions for a better digital future</p>
+<div class="header-container">
+    <header id="main-header">
+        <h1 onclick = "location.href = 'HomePage.php'">NCESTRAL</h1>
+        <img src="../../Logo.svg" alt="Ancestral Logo" class="Logo">
+        <nav class="nav">
+            <a href="Service.php">Services</a>
+            <a href="Blog.php">Blog/News</a>
+            <a href="About.php">About</a>
+            <a href="Contact.php" id="Contact">Contact</a>
+            <a href="#" class="btn" onclick = >Get Started</a>
+        </nav>
     </header>
+</div>
 
-    <section>
+
+    <section class = "section">
         <h2>Our Mission</h2>
         <p>At Ancestral, our mission is to develop cutting-edge AI solutions, operating systems, and software tools that simplify businesses and empower people worldwide.</p>
     </section>
@@ -105,7 +53,7 @@
         <h2>Our Team</h2>
         <div class="team">
             <div class="team-member">
-                <img src="founder.jpg" alt="Founder">
+                <img src="../../sample.jpg" alt="Founder">
                 <h3>Targib Uddin Sajid</h3>
                 <p>Founder & Visionary</p>
             </div>

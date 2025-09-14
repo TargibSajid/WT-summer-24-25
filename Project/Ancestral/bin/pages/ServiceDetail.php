@@ -1,9 +1,32 @@
 <?php
 session_start();
-include 'Config.php';
+require 'Config.php';
+
+
+// Check if 'service_id' exists in the URL
+if (isset($_GET['service_id'])) {
+    $service_id = $_GET['service_id'];
+
+    // Sanitize it if needed (convert to integer)
+    $service_id = (int)$service_id;
+
+    
+} 
+
+
+
 
 $successMessage = "";
 $errors = [];
+
+$stmt = $con->prepare("select * from services where service_id = ? ");
+$stmt->bind_param('i',$service_id);
+$stmt->execute();
+$result = $stmt->get_result();
+$row = $result->fetch_assoc();
+
+
+
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
@@ -12,10 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $errors[] = "You must be logged in to submit a request.";
 } else {
     $userid = $_SESSION['user_id'];
-}   
-    $service_id = 1;
-
-    $full_name      = $_POST['fullName'] ;
+}  $full_name      = $_POST['fullName'] ;
     $email          = $_POST['email'] ;
     $phone_number   = $_POST['phone'] ;
     $national_id_number = $_POST['nid'] ;
@@ -112,7 +132,7 @@ $con->close();
   <main class="wrapper">
 
     <div class = "Name-container">
-    <h2 id="sname" style="margin:0 0 14px 0;">AI Solutions — Request & Booking</h2>
+    <h2 id="sname" style="margin:0 0 14px 0;"><?php  echo $row['service_name'] ?> — Request & Booking</h2>
     </div>
 
     <div class = "main-container">
@@ -120,9 +140,9 @@ $con->close();
       <input type="hidden" name="action" value="submit_request">
       <input type="hidden" name="service" value="AI">
       <div style="display:flex; gap:10px; align-items:center; margin-bottom:10px;">
-        <img src="../../AI.png" alt="" style="width:48px;height:48px;object-fit:contain;">
+        <img id = "srlogo" src="#" alt="" style="width:48px;height:48px;object-fit:contain;">
         <div>
-          <h3 style="margin:0;">AI Solutions</h3>
+          <h3 style="margin:0;"><?php  echo $row['service_name'] ?></h3>
           <div class="small-note">Fill the form to request the service. We require ID & contact verification to avoid fraud.</div>
         </div>
       </div>
@@ -231,38 +251,42 @@ $con->close();
 
     <!-- RIGHT: Service details -->
     <div class="right">
-      <h3 style="margin-top:0;">AI Solutions — Overview</h3>
-      <p class="small-note">Example stack, cost tiers and deliverables. Edit as required for each service.</p>
+      <h3 style="margin-top:0;"><?php  echo $row['service_name'] ?> — Overview</h3>
+      <p class="small-note">
+      <?php  echo $row['description'] ?>  
+      Example stack, cost tiers and deliverables. Edit as required for each service.</p>
 
       <div style="margin-top:10px;">
-        <div style="display:flex;justify-content:space-between;"><span>Starter</span><strong>৳ 20,000</strong></div>
+        <div style="display:flex;justify-content:space-between;"><span>Starter</span><strong>৳ <?php  echo $row['pricing_starter'] ?></strong></div>
         <div class="small-note">Prototype, 1–2 week turnaround.</div>
 
-        <div style="display:flex;justify-content:space-between;margin-top:8px;"><span>Business</span><strong>৳ 80,000</strong></div>
+        <div style="display:flex;justify-content:space-between;margin-top:8px;"><span>Business</span><strong>৳ <?php  echo $row['pricing_business'] ?></strong></div>
         <div class="small-note">MVP with APIs and DB, 4–8 weeks.</div>
 
-        <div style="display:flex;justify-content:space-between;margin-top:8px;"><span>Enterprise</span><strong>৳ 250,000+</strong></div>
+        <div style="display:flex;justify-content:space-between;margin-top:8px;"><span>Enterprise</span><strong>৳ <?php  echo $row['pricing_enterprise'] ?>+</strong></div>
         <div class="small-note">Full product, deployment, maintenance.</div>
       </div>
 
       <hr>
 
       <h4>Typical tech stack</h4>
+
+      <?php  $techArray = json_decode($row['technologies_used'], true);?>
+
       <ul>
-        <li><strong>Languages:</strong> Python (AI), JavaScript/TypeScript</li>
-        <li><strong>AI:</strong> PyTorch / TensorFlow</li>
-        <li><strong>Frontend:</strong> React / Next.js</li>
-        <li><strong>Infra:</strong> Docker, AWS/GCP</li>
+        <li><strong>Languages:</strong> <?php echo $techArray[0]  ?></li>
+        <li><strong>AI:</strong> <?php echo $techArray[2] ."/". $techArray[1]   ?></li>
+
       </ul>
 
       <hr>
-
+<?php  $devArray = json_decode($row['deliverables'], true);?>
       <h4>Deliverables</h4>
       <ul>
-        <li>Proposal & contract</li>
-        <li>Prototype / demo</li>
-        <li>Deployed solution & docs</li>
-        <li>Handover & training</li>
+        <li> <?php echo $devArray[0]  ?></li>
+        <li><?php echo $devArray[1]  ?></li>
+        <li><?php echo $devArray[2]  ?></li>
+        <li><?php echo $devArray[3]  ?></li>
       </ul>
 
     </div>
@@ -287,11 +311,15 @@ $con->close();
 
       <div class="optional-addons">
         <h2>Optional Add-ons</h2>
+  
+        <?php  $adonArray = json_decode($row['optional_addons'], true);?>
+
+
         <ul>
-          <li><input type="checkbox" id="addon1"> Advanced AI Module</li>
-          <li><input type="checkbox" id="addon2"> Extra Security Features</li>
-          <li><input type="checkbox" id="addon3"> Maintenance Package</li>
-          <li><input type="checkbox" id="addon4"> Data Analytics Dashboard</li>
+          <li><input type="checkbox" id="addon1"><?php echo $adonArray[0]  ?> </li>
+          <li><input type="checkbox" id="addon2"> <?php echo $adonArray[1]  ?> </li>
+          <li><input type="checkbox" id="addon3"> <?php echo $adonArray[2]  ?> </li>
+          <li><input type="checkbox" id="addon4"> <?php echo $adonArray[3]  ?> </li>
         </ul>
       </div>
 

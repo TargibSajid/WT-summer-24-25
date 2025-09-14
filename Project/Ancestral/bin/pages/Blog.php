@@ -1,3 +1,18 @@
+<?php
+
+    session_start();
+
+    if (isset($_SESSION['username'])) {
+    $username = $_SESSION['username'];
+} elseif (isset($_COOKIE['username'])) {
+    $username = $_COOKIE['username'];
+}
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,24 +20,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog & News | Ancestral</title>
   <link rel="stylesheet" href="../cascade/Blog.css">
+  <link rel="stylesheet" href="../cascade/HomePage.css">
 </head>
 <body>
 
 <!-- Header -->
-<header class="header">
-  <h1>ANCESTRAL</h1>
-  <nav class="nav">
-      <a href="Home.php">Home</a>
-      <a href="Service.php">Services</a>
-      <a href="About.php">About</a>
-      <a href="BlogNews.php" class="active">Blog & News</a>
-      <a href="#" id="Contact">Contact</a>
-      <a href="#" class="btn">Get Started</a>
-  </nav>
-</header>
+<div class="header-container">
+    <header id="main-header">
+        <h1 onclick = "location.href = 'HomePage.php'">NCESTRAL</h1>
+        <img src="../../Logo.svg" alt="Ancestral Logo" class="Logo">
+        <nav class="nav">
+            <a href="Service.php">Services</a>
+            <a href="Blog.php">Blog/News</a>
+            <a href="About.php">About</a>
+            <a href="Contact.php" id="Contact">Contact</a>
+            <a href="#" class="btn" onclick = >Get Started</a>
+        </nav>
+    </header>
+</div>
 
 <!-- Hero Section -->
-<section class="hero">
+<section class="hero-x">
   <div class="hero-content">
     <h2>Blog & News</h2>
     <p>Stay updated with the latest insights, technology trends, and company news from Ancestral.</p>
@@ -35,7 +53,7 @@
 
     <!-- Card 1 -->
     <div class="blog-card">
-      <img src="../../blog1.jpg" alt="AI Revolution">
+      <img src="../../AITB.jpg" alt="AI Revolution">
       <div class="blog-content">
         <span class="category">Blog</span>
         <h3>How AI is Transforming Businesses</h3>
@@ -47,7 +65,7 @@
 
     <!-- Card 2 -->
     <div class="blog-card">
-      <img src="../../news1.jpg" alt="Cloud Partnership">
+      <img src="../../MCP.jpg" alt="Cloud Partnership">
       <div class="blog-content">
         <span class="category">News</span>
         <h3>Ancestral Partners with Major Cloud Provider</h3>
@@ -59,7 +77,7 @@
 
     <!-- Card 3 -->
     <div class="blog-card">
-      <img src="../../blog2.jpg" alt="Web Development Trends">
+      <img src="../../WT.png" alt="Web Development Trends">
       <div class="blog-content">
         <span class="category">Blog</span>
         <h3>Top 5 Web Development Trends in 2025</h3>

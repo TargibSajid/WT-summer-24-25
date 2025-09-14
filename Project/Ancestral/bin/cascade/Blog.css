@@ -5,45 +5,21 @@ body {
   color: #000;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 10%;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
 
-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-  color: #b33f62;
-}
 
-.nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #000;
-  font-weight: 500;
-}
 
-.nav a.active {
-  color: #b33f62;
-  font-weight: bold;
-}
 
-.btn {
-  border: 1px solid #b33f62;
-  padding: 8px 16px;
-  border-radius: 6px;
-  color: #b33f62;
-}
+.hero-x {
+  background: url("../../BackGround3.jpg") no-repeat center center/cover;
+  color: 
+  #ffffff;
 
-.hero {
-  background: url("../../blog-hero.jpg") no-repeat center center/cover;
-  color: #fff;
+  text-shadow: black 2px 2px 4px;
+  font-size: 20px;
+  font-weight: bolder;
   text-align: center;
   padding: 80px 10%;
+  margin-top: 180px;
 }
 
 .hero h2 {

@@ -1,0 +1,65 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background : url("../../BackGround8.jpg");
+            background-size: contain;
+            color: #000000;
+
+            font-size: 25px;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        h2 {
+            color: #ffffff;
+            margin-bottom: 15px;
+            text-shadow: #000000 2px 2px 4px;
+        }
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .team-member {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 220px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .team-member img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            background: #000000;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        a.cta-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #000000;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a.cta-button:hover {
+            background: #6a1b9a;
+        }
+
+        .section
+        {
+            margin-top: 180px;
+        }
