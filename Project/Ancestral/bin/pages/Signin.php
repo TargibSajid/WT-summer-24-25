@@ -20,6 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $row['password_hash'])) {
             $_SESSION['username'] = $row['user_name'];
             $_SESSION['email'] = $row['email'];
+            $_SESSION['user_id'] = $row['user_id'];
+
 
             setcookie("username", $row['user_name'], time() + (86400 * 7), "/");
 

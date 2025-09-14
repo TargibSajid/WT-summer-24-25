@@ -1,12 +1,84 @@
 <?php
+session_start();
+include 'Config.php';
 
-  session_start();
+$successMessage = "";
+$errors = [];
 
-  
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+
+ if (!isset($_SESSION['user_id'])) {
+    $errors[] = "You must be logged in to submit a request.";
+} else {
+    $userid = $_SESSION['user_id'];
+}   
+    $service_id = 1;
+
+    $full_name      = $_POST['fullName'] ;
+    $email          = $_POST['email'] ;
+    $phone_number   = $_POST['phone'] ;
+    $national_id_number = $_POST['nid'] ;
+    $location       = $_POST['location'];
+    $project_details= $_POST['details'];
+    $requirement_details = $_POST['timeline'] ; 
+    $estimated_budget= $_POST['budget'] ;
+    $expected_timeline= $_POST['timeline'] ;
 
 
 
+    $nidFileData = null;
+    if (isset($_FILES['nid_scan']) && $_FILES['nid_scan']['error'] === 0) {
+        $nidFileData = file_get_contents($_FILES['nid_scan']['tmp_name']);
+    }
+
+
+    $paymentFileData = null;
+    if (isset($_FILES['payment_proof']) && $_FILES['payment_proof']['error'] === 0) {
+        $paymentFileData = file_get_contents($_FILES['payment_proof']['tmp_name']);
+    }
+
+   
+$stmt = $con->prepare("
+    INSERT INTO service_requests
+    (service_id,user_id,full_name, email, phone_number, national_id_number, nid_passport_file, payment_proof_file,
+    location, project_details, requirement_details, estimated_budget, expected_timeline)
+    VALUES (?,?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+");
+
+
+$stmt->bind_param(
+    "iissssssssssd", 
+     $service_id,$userid,$full_name, $email, $phone_number, $national_id_number,
+    $nidFileData, $paymentFileData, $location, $project_details, $requirement_details,
+    $estimated_budget, $expected_timeline
+);
+
+
+if ($nidFileData !== null) {
+    $stmt->send_long_data(4, $nidFileData); 
+}
+if ($paymentFileData !== null) {
+    $stmt->send_long_data(5, $paymentFileData);
+}
+
+if ($stmt->execute()) {
+    $successMessage = "Request submitted successfully!";
+    $_SESSION['last_submission'] = [
+        'id' => $stmt->insert_id,
+        'full_name' => $full_name
+    ];
+} else {
+    $errors[] = "Database error: " . $stmt->error;
+}
+
+
+    $stmt->close();
+}
+
+$con->close();
 ?>
+
 
 
 
@@ -195,7 +267,7 @@
 
     </div>
 
-      <!-- Cost Estimator -->
+      
       <div>
       <div class="cost-estimator">
         <h2>Estimate Your Project Cost</h2>

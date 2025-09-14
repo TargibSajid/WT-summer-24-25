@@ -15,6 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
     $result = $stmt->get_result();
 
+    $row = $result->fetch_assoc();
+
     if ($result->num_rows > 0) {
         echo "❌ Email already registered!";
         exit;
@@ -30,6 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $_SESSION['username'] = $username;
         $_SESSION['email']    = $email;
+        $_SESSION['user_id'] = $row['user_id'];
 
         setcookie("username", $username, time() + (86400*7), "/");
 
