@@ -1,3 +1,8 @@
+
+
+
+
+
 window.addEventListener('scroll', function() {
   const header = document.getElementById('main-header');
   if (window.scrollY > 60) {
@@ -7,4 +12,15 @@ window.addEventListener('scroll', function() {
   }
 });
 
+
 console.log('hellow');
+
+// Get the URL parameters
+const params = new URLSearchParams(window.location.search);
+
+// Retrieve specific variables
+const service_id = params.get('service_id'); // "Sajid"
+
+
+
+

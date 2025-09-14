@@ -54,8 +54,10 @@ console.log("HEllo");
     console.log(document.cookie);
 
 
-    function  selectService()
+    export function  selectService(service_id)
     {
+
+        console.log(service_id);
       
     }
 

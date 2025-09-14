@@ -97,7 +97,7 @@
                 <li>Custom AI tools for business or daily life</li>
                 <li>Machine learning models and AI integration</li>
             </ul>
-            <a href="#" class="get-started-btn">Get Started</a>
+            <a href="ServiceDetail.php?service_id=1" class="get-started-btn">Get Started</a>
         </div>
     </div>
 
@@ -112,7 +112,7 @@
                 <li>Web apps and Progressive Web Apps (PWAs)</li>
                 <li>Mobile apps for Android and iOS</li>
             </ul>
-            <a href="#" class="get-started-btn">Get Started</a>
+            <a href="ServiceDetail.php?service_id=2" class="get-started-btn">Get Started</a>
         </div>
     </div>
 
@@ -127,7 +127,7 @@
                 <li>Customer Relationship Management (CRM) tools</li>
                 <li>Productivity and workflow optimization software</li>
             </ul>
-            <a href="#" class="get-started-btn">Get Started</a>
+            <a href="ServiceDetail.php?service_id=3" class="get-started-btn">Get Started</a>
         </div>
     </div>
 
@@ -142,7 +142,7 @@
                 <li>Performance optimization</li>
                 <li>Regular updates and feature enhancements</li>
             </ul>
-            <a href="#" class="get-started-btn">Get Started</a>
+            <a href="ServiceDetail.php?service_id=4" class="get-started-btn">Get Started</a>
         </div>
     </div>
 
@@ -157,7 +157,7 @@
                 <li>Secure and scalable hosting solutions</li>
                 <li>Database management and cloud storage integration</li>
             </ul>
-            <a href="#" class="get-started-btn">Get Started</a>
+            <a href="ServiceDetail.php?service_id=5" class="get-started-btn">Get Started</a>
         </div>
     </div>
 
@@ -172,7 +172,7 @@
                 <li>Prototyping and wireframing</li>
                 <li>Improving user engagement and experience</li>
             </ul>
-            <a href="#" class="get-started-btn">Get Started</a>
+            <a href="ServiceDetail.php?service_id=6" class="get-started-btn">Get Started</a>
         </div>
     </div>
 
@@ -187,7 +187,7 @@
                 <li>AI adoption consulting</li>
                 <li>Tech roadmap planning for businesses</li>
             </ul>
-            <a href="#" class="get-started-btn">Get Started</a>
+            <a href="ServiceDetail.php?service_id=7" class="get-started-btn">Get Started</a>
         </div>
     </div>
 
@@ -204,7 +204,7 @@
                 <li>Secure infrastructure and firewalls</li>
                 <li>Data privacy and compliance support</li>
             </ul>
-            <a href="#" class="get-started-btn">Get Started</a>
+            <a href="ServiceDetail.php?service_id=8" class="get-started-btn">Get Started</a>
         </div>
     </div>
 
@@ -219,7 +219,7 @@
                 <li>Business intelligence dashboards</li>
                 <li>AI-driven decision-making insights</li>
             </ul>
-            <a href="#" class="get-started-btn">Get Started</a>
+            <a href="ServiceDetail.php?service_id=9" class="get-started-btn">Get Started</a>
         </div>
     </div>
 
@@ -234,7 +234,7 @@
                 <li>Unity & Unreal Engine development</li>
                 <li>Cross-platform mobile and PC games</li>
             </ul>
-            <a href="#" class="get-started-btn">Get Started</a>
+            <a href="ServiceDetail.php?service_id=10" class="get-started-btn">Get Started</a>
         </div>
     </div>
 
@@ -249,7 +249,7 @@
                 <li>Embedded hardware programming</li>
                 <li>IoT platforms for business automation</li>
             </ul>
-            <a href="#" class="get-started-btn">Get Started</a>
+            <a href="ServiceDetail.php?service_id=11" class="get-started-btn">Get Started</a>
         </div>
     </div>
 </div>
