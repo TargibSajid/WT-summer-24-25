@@ -1,3 +1,17 @@
+<?php
+
+    session_start();
+
+    if (isset($_SESSION['username'])) {
+    $username = $_SESSION['username'];
+} elseif (isset($_COOKIE['username'])) {
+    $username = $_COOKIE['username'];
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +22,35 @@
     <link rel="stylesheet" href="../cascade/About.css? <?php echo time(); ?>"><!-- Optional external CSS -->
 </head>
 <body>
+
+
+<?php if (isset($_SESSION['username'])): ?>
+
+      <a id = "User">   </a>
+
+        <button id = "logbtn" type = "submit" class = "logout" onclick="location.href='Logout.php';">
+    <img id ="log" src="../../Logout2.png" alt="icon" style="width:25px; height:25px; vertical-align:left;">        
+    Sing out
+</button>
+          <script>
+
+          const usernameFromPHP = <?php echo json_encode($username); ?>;
+          
+          
+          </script>";
+
+
+<?php else: ?>
+    <button id = "logbtn" type = "submit" class = "logout" onclick="location.href='Signin.php';">
+    <img id ="log" src="../../Logout2.png" alt="icon" style="width:25px; height:25px; vertical-align:left;">        
+    Sign in
+</button>
+
+
+<?php endif; ?>
+
+
+
 
 <div class="header-container">
     <header id="main-header">
@@ -85,6 +128,10 @@
     <footer>
         <p>&copy; 2025 Ancestral. All rights reserved.</p>
     </footer>
+
+
+
+    <Script src="../interactivity/Service.js ? <?php echo time(); ?>"></Script>
 
 </body>
 </html>
