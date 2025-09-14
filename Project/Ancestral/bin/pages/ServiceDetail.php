@@ -3,11 +3,11 @@ session_start();
 require 'Config.php';
 
 
-// Check if 'service_id' exists in the URL
+
 if (isset($_GET['service_id'])) {
     $service_id = $_GET['service_id'];
 
-    // Sanitize it if needed (convert to integer)
+   
     $service_id = (int)$service_id;
 
     
@@ -114,7 +114,7 @@ $con->close();
 </head>
 <body>
 
-  <!-- Header -->
+  
   <div class="header-container">
     <header id="main-header">
       <h1>ANCESTRAL</h1>
@@ -249,7 +249,7 @@ $con->close();
     </form>
 </div>
 
-    <!-- RIGHT: Service details -->
+    
     <div class="right">
       <h3 style="margin-top:0;"><?php  echo $row['service_name'] ?> — Overview</h3>
       <p class="small-note">

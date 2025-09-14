@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'Config.php'; // Make sure $con is your mysqli connection
+require 'Config.php'; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 

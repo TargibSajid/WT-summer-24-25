@@ -281,7 +281,7 @@
         </ul>
       </div>
 
-      <!-- Mobile App -->
+      
       <div class="footer-column">
         <h3>Mobile App</h3>
         <ul>
@@ -299,7 +299,7 @@
         </ul>
       </div>
 
-      <!-- Cloud Solution -->
+      
       <div class="footer-column">
         <h3>Cloud Solution</h3>
         <ul>
@@ -317,7 +317,7 @@
         </ul>
       </div>
 
-      <!-- Company -->
+      
       <div class="footer-column">
         <h3>Our Company</h3>
         <ul>

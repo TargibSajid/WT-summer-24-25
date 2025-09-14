@@ -75,7 +75,6 @@ session_start();
     </div>
 
     <div class="layout">
-      <!-- LEFT -->
       <div class="leftCol">
         <div class="panel submissions-list" id="submissions">
           <h3>Incoming Requests / Messages</h3>
@@ -129,7 +128,6 @@ session_start();
         </div>
       </div>
 
-      <!-- RIGHT -->
       <aside class="detail-panel">
         <div class="panel" id="detailPanel">
           <h3>Submission Details</h3>

@@ -11,7 +11,7 @@
       margin: 0;
       background: #f4f6f8;
       color: #333;
-      font-size: 18px; /* bigger base font */
+      font-size: 18px; 
       line-height: 1.8;
     }
 
@@ -69,7 +69,7 @@
     .progress {
       background: #3b82f6;
       height: 100%;
-      width: 60%; /* example */
+      width: 60%; 
       text-align: center;
       color: white;
       font-size: 16px;
@@ -162,10 +162,10 @@
     <p>📅 Estimated Completion: <strong>2025-12-10</strong></p>
   </div>
 
-  <!-- Actions -->
+  
   <div class="actions">
     
-    <!-- Feature Request -->
+    
     <div class="card">
       <h3>📝 Request New Feature</h3>
       <form method="POST" action="feature_request.php">
@@ -174,7 +174,7 @@
       </form>
     </div>
 
-    <!-- Update Requirements -->
+    
     <div class="card">
       <h3>🔧 Update Requirements</h3>
       <form method="POST" action="update_requirements.php">
@@ -183,7 +183,7 @@
       </form>
     </div>
 
-    <!-- Request Meeting -->
+    
     <div class="card">
       <h3>📅 Organize Meeting</h3>
       <form method="POST" action="request_meeting.php">

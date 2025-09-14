@@ -196,12 +196,12 @@ if (isset($_SESSION['username'])) {
     <h2 class="testimonial-header">What our Client says</h2>
 
     <div class="testimonial-container">
-        <!-- Left side: Image -->
+        
         <div class="testimonial-image">
             <img src="../../Client.png" alt="Client Testimonial">
         </div>
 
-        <!-- Right side: Text -->
+        
         <div class="testimonial-content">
             <h4>Fitness App Development</h4>
             <p>
@@ -223,7 +223,7 @@ if (isset($_SESSION['username'])) {
 
 
     <video src="../../background4.mp4" class="bg-video-test" autoplay muted loop playsinline></video>
-    <!-- Dots Navigation -->
+    
 
 </section>
 
