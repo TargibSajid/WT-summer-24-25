@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             setcookie("username", $row['user_name'], time() + (86400 * 7), "/");
 
-            header("Location: Admin.php");
+            header("Location: ../Admin/Admin.php");
             exit;
         } else {
             echo "<p style='color:red;'>❌ Wrong password admin!</p>";

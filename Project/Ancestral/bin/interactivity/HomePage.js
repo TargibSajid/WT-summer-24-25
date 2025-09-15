@@ -57,7 +57,7 @@ btnlogout.addEventListener("mouseleave", function() {
     if (usernameFromPHP) {
         // If logged in
         user.textContent =  usernameFromPHP;
-        user.href = "Track.php"; // Redirect to profile or homepage
+        user.href = "RegisteredUser/Track.php"; // Redirect to profile or homepage
     } else {
         // If not logged in
         user.textContent = "Sign In";

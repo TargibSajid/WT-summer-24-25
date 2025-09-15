@@ -14,7 +14,7 @@ session_start();
 <meta charset="utf-8">
 <title>Ancestral Admin Dashboard</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="../cascade/Admin.css? <?php echo time(); ?>"
+<link rel="stylesheet" href="../../cascade/Admin.css? <?php echo time(); ?>"
 
 </head>
 

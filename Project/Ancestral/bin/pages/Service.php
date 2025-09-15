@@ -11,6 +11,11 @@
 
 ?>
 
+<?php if(isset($_SESSION['username'])):?>
+
+
+
+
 
 
 
@@ -370,3 +375,18 @@
 
 </body>
 </html>
+
+<?php else:?>
+
+    <!DOCTYPE html>
+
+    <html>
+
+        
+        Please Be a Registred User To Use the Service Page
+
+
+        </html>
+
+
+    <?php endif;?>
